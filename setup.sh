@@ -1,7 +1,7 @@
 #!/bin/sh
 # -*- mode: sh -*-
 
-sudo ls
+sudo ls >/dev/null 2>&1
 if [ $? -eq 0 ]
 then
     sudo apt-get update -qq
