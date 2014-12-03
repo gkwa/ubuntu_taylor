@@ -1,8 +1,15 @@
 #!/bin/sh
 # -*- mode: sh -*-
 
-sudo apt-get update -qq
-sudo apt-get install -y emacs git lsof
+sudo ls
+if [ $? -eq 0 ]
+then
+    sudo apt-get update -qq
+    sudo apt-get install -y emacs git lsof
+else
+    apt-get update -qq
+    apt-get install -y emacs git lsof
+fi
 
 cd ~
 
